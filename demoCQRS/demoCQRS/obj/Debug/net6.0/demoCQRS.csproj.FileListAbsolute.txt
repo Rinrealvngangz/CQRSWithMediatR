@@ -235,3 +235,5 @@
 /Users/nguyenmautuan/Documents/C#/CQRSWithMediatR/demoCQRS/demoCQRS/obj/Debug/net6.0/demoCQRS.genruntimeconfig.cache
 /Users/nguyenmautuan/Documents/C#/CQRSWithMediatR/demoCQRS/demoCQRS/bin/Debug/net6.0/FluentValidation.dll
 /Users/nguyenmautuan/Documents/C#/CQRSWithMediatR/demoCQRS/demoCQRS/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/nguyenmautuan/Documents/C#/CQRSWithMediatR/demoCQRS/demoCQRS/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/nguyenmautuan/Documents/C#/CQRSWithMediatR/demoCQRS/demoCQRS/bin/Debug/net6.0/Scrutor.dll
