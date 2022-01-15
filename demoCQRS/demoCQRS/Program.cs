@@ -1,5 +1,8 @@
 using System.Reflection;
+using demoCQRS.PipelineBehaviors;
 using demoCQRS.Repository;
+using demoCQRS.Validation;
+using FluentValidation;
 using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +17,8 @@ builder.Host.ConfigureServices((_, services) =>
 {
     services.AddSingleton<IRepositoryOrder, RepositoryOrder>();
     services.AddMediatR(Assembly.GetExecutingAssembly());
+    services.AddValidatorsFromAssemblyContaining(typeof(CreateOrderValidation));
+    services.AddTransient(typeof(IPipelineBehavior<,>),typeof(ValidationBehavior<,>));
 });
 var app = builder.Build();
 

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "X3Veh6Dnbi5e8SaRjOgzHedHx0Sfe98ulO20ScSk9+22ZRB3ROIf0iBJaQFJUz6m6y9RHJ174RRAzirSF9XP1Q==",
+  "dgSpecHash": "r3kYixrYAPobDOi2OVjiv9zlIxQFxp+0Yce82I30RHr8mLiMkCMXPEp82+kLA1/CAscFbOe5+dtt7oXrR/dGlg==",
   "success": true,
   "projectFilePath": "/Users/nguyenmautuan/Documents/C#/CQRSWithMediatR/demoCQRS/demoCQRS/demoCQRS.csproj",
   "expectedPackageFiles": [
+    "/Users/nguyenmautuan/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
+    "/Users/nguyenmautuan/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.3.6/fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "/Users/nguyenmautuan/.nuget/packages/humanizer.core/2.2.0/humanizer.core.2.2.0.nupkg.sha512",
     "/Users/nguyenmautuan/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
     "/Users/nguyenmautuan/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
