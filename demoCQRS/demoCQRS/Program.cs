@@ -5,6 +5,7 @@ using demoCQRS.Repository.Cached;
 using demoCQRS.Validation;
 using FluentValidation;
 using MediatR;
+using Scrutor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +17,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.ConfigureServices((_, services) =>
 {
-    services.AddSingleton<IRepositoryOrder, RepositoryOrder>();
-    services.Decorate<IRepositoryOrder, CachedCustomerRepository>();
+    services.Scan(scan => scan
+        .FromAssemblyOf<Program>()
+        .AddClasses(classes => classes.Where(t=>t.Name.StartsWith("Repository",StringComparison.OrdinalIgnoreCase)))
+        .AsImplementedInterfaces()
+        .WithSingletonLifetime()
+    );
+    //same
+    //services.AddSingleton<IRepositoryOrder, RepositoryOrder>();
+   services.Decorate<IRepositoryOrder, CachedCustomerRepository>();
     services.AddMediatR(Assembly.GetExecutingAssembly());
     services.AddValidatorsFromAssemblyContaining(typeof(CreateOrderValidation));
     services.AddTransient(typeof(IPipelineBehavior<,>),typeof(ValidationBehavior<,>));
+    
 });
 var app = builder.Build();
 
